@@ -108,7 +108,7 @@ Phase 4 (10-file checkpoint):
 ### Design Decisions
 
 | Decision | Choice | Rationale |
-|---|---|---|
+| --- | --- | --- |
 | Triage output format | JSON array | Machine-readable; consumed by Autofix without parsing prose |
 | Scan mode | `synchronous: true` | Autofix must wait for results before triaging |
 | File-change gate | > 10 files | Balances thoroughness against scan turnaround time |
@@ -150,7 +150,6 @@ Phase 4 (10-file checkpoint):
 [Skills](https://github.com/dipsylala/veracode-skills) are lightweight prompt instructions that guide Copilot to call the right MCP tools for a specific task. They are ideal for interactive, single-purpose workflows.
 
 Agents are more capable: they can make autonomous decisions, spawn subagents, maintain loop state, and chain multi-step operations. Use agents when you want hands-off automation rather than guided assistance.
-
 
 ## See Also
 
