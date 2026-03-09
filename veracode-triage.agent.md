@@ -1,6 +1,6 @@
 ---
 name: "Veracode Triage"
-description: "Returns a machine-readable JSON prioritisation of Veracode pipeline SAST and local SCA findings, ranked by remediation priority. Use in automated pipelines or when the calling agent needs structured finding data. Use 'Veracode Analyst' instead when human-readable narrative analysis is needed."
+description: "Returns a machine-readable JSON prioritisation of Veracode pipeline SAST and local SCA findings, ranked by remediation priority. Use in automated pipelines or when the calling agent needs structured finding data."
 tools: ["veracode/*", "read", "search"]
 user-invocable: false
 ---

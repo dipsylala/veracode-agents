@@ -14,7 +14,6 @@ All agents require the [Veracode MCP server](https://github.com/dipsylala/veraco
 
 | Agent | User-invocable | What it does |
 | --- | --- | --- |
-| **Veracode Analyst** | Yes | Interprets local scan findings and delivers prioritised, context-aware remediation analysis |
 | **Veracode Autofix** | Yes | Autonomous scan → triage → fix loop; packages, scans, triages, and applies fixes until all high/critical findings are resolved |
 | **Veracode Triage** | No (machine callout) | Returns a machine-readable JSON ranking of all findings by remediation priority; consumed by Veracode Autofix |
 
@@ -25,7 +24,6 @@ All agents require the [Veracode MCP server](https://github.com/dipsylala/veraco
 Copy the agent files into your project's `.github/agents/` directory:
 
 ```text
-<your-project>/.github/agents/veracode-analyst.agent.md
 <your-project>/.github/agents/veracode-autofix.agent.md
 <your-project>/.github/agents/veracode-triage.agent.md
 ```
@@ -53,16 +51,6 @@ cp *.agent.md "$HOME/.config/Code/User/agents/"
 After placing the files, reload VS Code (`Developer: Reload Window`). User-invocable agents appear in the Copilot Chat mode selector.
 
 ## Usage
-
-### Veracode Analyst
-
-Select **Veracode Analyst** from the Copilot Chat mode selector, or let Copilot spawn it automatically as a subagent:
-
-```text
-Analyse the security posture of /path/to/my/project and tell me what I should fix first.
-```
-
-The agent checks for existing scan results, retrieves findings across SAST and SCA, and synthesises a prioritised remediation plan. It does **not** modify code or run scans unless explicitly asked.
 
 ### Veracode Autofix
 
@@ -163,7 +151,6 @@ Phase 4 (10-file checkpoint):
 
 Agents are more capable: they can make autonomous decisions, spawn subagents, maintain loop state, and chain multi-step operations. Use agents when you want hands-off automation rather than guided assistance.
 
-The **reportit** skill in particular will automatically spawn the **Veracode Analyst** agent when it is available, deferring the analysis to the agent's richer reasoning capabilities.
 
 ## See Also
 
