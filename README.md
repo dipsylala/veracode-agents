@@ -81,7 +81,7 @@ Not directly invocable by users. Called automatically by **Veracode Autofix** du
 ┌────────────────────────▼────────────────────────────────────┐
 │  Phase 2 — Triage                                           │
 │    Spawn "Veracode Triage" → JSON findings array            │
-│    No severity ≥ 4? → STOP (clean)                         │
+│    No severity ≥ 4? → STOP (clean)                          │
 └────────────────────────┬────────────────────────────────────┘
                          │
 ┌────────────────────────▼────────────────────────────────────┐
@@ -90,7 +90,7 @@ Not directly invocable by users. Called automatically by **Veracode Autofix** du
 │    SCA:  identify safe version → upgrade via package mgr    │
 │    After each fix: run build → auto-fix compile errors      │
 │    Track changed files                                      │
-│    > 10 files changed? → Phase 4                           │
+│    > 10 files changed? → Phase 4                            │
 └────────────────────────┬────────────────────────────────────┘
                          │ (all attempted or no more sev ≥ 4)
 ┌────────────────────────▼────────────────────────────────────┐
